@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/src/style.css">
   </head>
   <body class="bg-[#f4f2ee]">
-     <header class="bg-white py-1 border-b border-[#e8e8e8] px-50">
+     <header class="bg-white py-1 border-b border-[#e8e8e8] px-5 || xl:px-24 || 2xl:px-50">
       <nav class="flex justify-between">
         <!-- left -->
         <div class="flex items-center space-x-2">
@@ -22,7 +22,7 @@
           </svg>
           </a>
           <!-- search -->
-           <div class="">
+           <div class="hidden md:block">
               <div class="relative">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg class="w-4 h-4 text-body" aria-hidden="true" class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -38,8 +38,8 @@
            </div>
         </div>
         <!-- right -->
-        <div class="flex">
-          <div class="flex **:text-xs **:fill-[#00000099] **:text-[#00000099] space-x-6">
+        <div class="hidden || lg:flex">
+          <div class="flex **:text-xs **:fill-[#00000099] **:text-[#00000099] space-x-6 *:hover:**:fill-[#191919] *:hover:*:text-[#191919]">
             <!-- 1 -->
               <a href="" class="flex-row justify-items-center items-center">
                     <svg
@@ -102,7 +102,7 @@
               <!-- 6 -->
               <a href="" class="flex-row justify-items-center items-center">
                 <img width="24"
-                  src="https://media.licdn.com/dms/image/v2/D4D35AQFt7pfI4DJ4fQ/profile-framedphoto-shrink_100_100/B4DZpuahK5KIAk-/0/1762789037004?e=1766210400&amp;v=beta&amp;t=otQ03HxmQaqP13dHqiidv8F8HSJU9dfxmSqiVctBEIA"
+                  src="/public/images/profile-small.jpg"
                   height="24" alt="Dhinakaran Laran" id="ember16" class="rounded-full">
                   <div class="flex w-7" >
                     <span class="t-12 wrap-break-word" title="Home">
@@ -154,19 +154,27 @@
           </div>
           <!-- /// -->
         </div>
+        <!-- toggle btn -->
+        <div class="flex justify-center content-center || lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="hover:fill-[#49505a]">
+            <path fill="currentColor"
+              d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z" />
+          </svg>
+        </div>
       </nav>
      </header>
 
-    <main class="bg-transparent px-50 grid grid-cols-12 gap-x-8 mt-5">
+    <main class="bg-transparent grid mt-5 grid-cols-12 || xl:px-24 || 2xl:px-50 2xl:gap-x-8">
       <!-- left -->
-       <aside class="col-span-3 space-y-3">
-        <div class="bg-white rounded-lg pb-14 shadow shadow-black/20">
+       <aside class="col-span-12 mb-3 space-y-3 || md:col-span-4 md:mx-3 || lg:col-span-3 ">
+        <!-- 1 -->
+        <div class="bg-white pb-16 shadow shadow-black/20 || md:rounded-lg">
           <div class="relative bg-[url(https://media.licdn.com/dms/image/v2/D5616AQHKD23kY5W6Pw/profile-displaybackgroundimage-shrink_200_800/B56ZmElglfJ8AU-/0/1758866051030?e=1767225600&v=beta&t=BgeDHXGU4m-cR1LObGCxhfHvGhct-VdgbNTXGcaH2to)] w-full h-50 bg-contain bg-top bg-no-repeat">
-            <img width="72"
-              src="https://media.licdn.com/dms/image/v2/D4D35AQFt7pfI4DJ4fQ/profile-framedphoto-shrink_100_100/B4DZpuahK5KIAk-/0/1762789037004?e=1766214000&amp;v=beta&amp;t=mM6_GFdvdLo9ZaFLVAQpbswREJ8P8Ij-B66kkkSXRhg"
-              loading="lazy" height="72" alt="Photo of Dhinakaran" class="rounded-full absolute top-10 left-3">
+            <img width="72" height="72"
+              src="/public/images/profile-small.jpg"
+              alt="Photo of Dhinakaran" class="rounded-full absolute top-10 left-3">
               <!-- profile -->
-              <div class="pt-30 mx-3 space-y-0.5">
+              <div class="pt-28 space-y-0.5 mx-3 || max-md:mx-5">
                 <div class=" ">
                   <h3 class="text-lg font-semibold">
                     Dhinakaran Laran
@@ -187,8 +195,8 @@
         </div>
 
         <!-- 2 -->
-        <div class="bg-white rounded-lg shadow shadow-black/20 relative">
-            <div class="mx-3 py-4 space-y-0.5">
+        <div class="bg-white shadow shadow-black/20 relative || md:rounded-lg">
+            <div class="mx-3 py-4 space-y-0.5 || max-md:mx-5">
               <div class=" ">
                 <h3 class="text-lg font-semibold">
                   Connections
@@ -204,8 +212,8 @@
           </div>
 
           <!-- 3 -->
-        <div class="bg-white rounded-lg shadow shadow-black/20">
-          <div class="mx-3 py-4 space-y-0.5">
+        <div class="bg-white shadow shadow-black/20 || md:rounded-lg">
+          <div class="mx-3 py-4 space-y-0.5 || max-md:mx-5">
             <div class=" ">
               <p class="text-gray-500 text-sm">
                 Access exclusive tools & insights
@@ -225,8 +233,8 @@
         </div>
 
         <!-- 4GG -->
-        <div class="bg-white rounded-lg shadow shadow-black/20">
-          <div class="mx-3 py-1 space-y-0.5">
+        <div class="bg-white shadow shadow-black/20 || md:rounded-lg">
+          <div class="mx-3 py-1 space-y-0.5 || max-md:mx-5">
             <ul class="**:fill-[#191919] **:text-sm space-y-3 my-3">
               <!-- 1 -->
               <li class="">
@@ -289,20 +297,18 @@
               </ul>
           </div>
         </div>
-          <!--////-->
-        </div>
        </aside>
       <!-- center -->
-      <section class="col-span-6">
+      <section class="col-span-12 || md:col-span-8 md:mx-3 || lg:col-span-6">
         <!-- add post -->
-        <div class="bg-white rounded-lg shadow shadow-black/20">
-          <div class="mx-3 py-1 space-y-0.5">
+        <div class="bg-white shadow shadow-black/20 || md:rounded-lg">
+          <div class="mx-3 py-1 space-y-0.5 || max-md:mx-5">
             <div class="">
               <!--1-->
               <div class="mt-2">
                   <div class="flex space-x-2">
                     <img
-                      src="https://media.licdn.com/dms/image/v2/D4D35AQFt7pfI4DJ4fQ/profile-framedphoto-shrink_100_100/B4DZpuahK5KIAk-/0/1762789037004?e=1766214000&amp;v=beta&amp;t=mM6_GFdvdLo9ZaFLVAQpbswREJ8P8Ij-B66kkkSXRhg"
+                      src="/public/images/profile-small.jpg"
                       alt="profile" class="rounded-full w-12">
                       <input type="text" placeholder="Start a post" class="w-full border border-gray-300 font-semibold rounded-full mr-2 focus:outline-0 hover:bg-gray-100 placeholder:text-sm placeholder:text-gray-600 indent-5">
                   </div>                
@@ -355,12 +361,12 @@
 
         <!-- posts -->
          <!-- 1 -->
-          <div class="bg-white rounded-lg shadow shadow-black/20">
-            <div class="mx-3 py-1 space-y-0.5">
+          <div class="bg-white shadow shadow-black/20 || md:rounded-lg">
+            <div class="mx-3 py-1 space-y-0.5 || max-md:mx-5">
                 <!--sm-profile-->
                   <div class="flex space-x-3 space-y-0 mt-3 mb-2 items-center">
                     <img
-                      src="https://media.licdn.com/dms/image/v2/D5603AQEalY4wEgt8wQ/profile-displayphoto-scale_100_100/B56Zr8Sx5nHIAo-/0/1765169374242?e=1767225600&v=beta&t=x5vKnanUiI6Y7vcpEpGOAz9a6vDoPk8cbeNUUX5LxPs"
+                      src="/public/images/1-guy-profile-img.jpg"
                       alt="profile" class="rounded-full w-12 h-12">
                       <!-- id -->
                         <div class="">
@@ -443,12 +449,12 @@
         </div>
 
         <!-- 2 -->
-        <div class="bg-white rounded-lg shadow shadow-black/20 mt-3">
-          <div class="mx-3 py-1 space-y-0.5">
+        <div class="bg-white shadow shadow-black/20 mt-3 || md:rounded-lg">
+          <div class="mx-3 py-1 space-y-0.5 || max-md:mx-5">
             <!--sm-profile-->
             <div class="flex space-x-3 space-y-0 mt-3 mb-2 items-center">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E35AQG5fmP7fJoXig/profile-framedphoto-shrink_200_200/B4EZcCXzSCHMAY-/0/1748091483533?e=1766235600&v=beta&t=hY9k8QHQWbbV0dmoOZ4VtMx-FNlPsNCX9CjNK0yUMt8"
+                src="/public/images/2-profile-img.jpg"
                 alt="profile" class="rounded-full w-12 h-12">
               <!-- id -->
               <div class="">
@@ -536,12 +542,12 @@
         </div>
 
         <!-- 3 -->
-        <div class="bg-white rounded-lg shadow shadow-black/20 mt-3 mb-4">
-          <div class="mx-3 py-1 space-y-0.5">
+        <div class="bg-white shadow shadow-black/20 mt-3 mb-4 || md:rounded-lg">
+          <div class="mx-3 py-1 space-y-0.5 || max-md:mx-5">
             <!--sm-profile-->
             <div class="flex space-x-3 space-y-0 mt-3 mb-2 items-center">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D0BAQHdQuCdshg-oQ/company-logo_100_100/company-logo_100_100/0/1714980904239?e=1767225600&v=beta&t=9u-XUOrBX2M11lHumNEsJrG6tMB7Pqe6pqyIlU4KJZg"
+                src="/public/images/3-profile-img.jpg"
                 alt="profile" class="rounded-full w-12 h-12">
               <!-- id -->
               <div class="">
@@ -632,9 +638,13 @@
       </section>
 
       <!-- right -->
-      <aside class="col-span-3">
-        <div class="bg-white rounded-lg shadow shadow-black/20">
-          <div class="mx-3 py-1 relative">
+       <!-- clear-div -->
+      <div class="hidden col-span-4 || md:max-lg:block mx-5">
+      </div>
+       <!-- r -->
+      <aside class="col-span-12 || md:col-span-8 || lg:col-span-3">
+        <div class="bg-white rounded-lg shadow shadow-black/20 mx-3">
+          <div class="mx-3 py-1 relative || max-md:mx-5">
             <!-- float icon -->
              <div class="absolute top-4 right-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="signal-notice-small" aria-hidden="true" role="none"
@@ -715,7 +725,7 @@
         </div>
 
         <footer class="">
-          <div class="mx-3 mt-5">
+          <div class="mx-3 mt-5 || max-md:mx-5">
           <div class="grid grid-cols-10 gap-x-5 gap-y-2 justify-items-center *:text-xs *:text-gray-500">
             <div class="col-span-3">About</div>
             <div class="col-span-3">Accessibility</div>
@@ -731,7 +741,7 @@
           <div class=" *:text-xs *:text-gray-500 text-center underline">
             <a href="https://github.com/dhinakaran-Y/CD-linked-in-clone" target="_blank">Github repository link</a>
           </div>
-          <div class="grid grid-cols-6 mt-3 text-xs">
+          <div class="grid grid-cols-6 mt-3 text-xs || max-md:mx-10">
             <svg class="col-span-2">
               <image href="https://static.licdn.com/aero-v1/sc/h/aahlc8ivbnmk0t3eyz8as5gvr" x="0" y="0">
               </image>
